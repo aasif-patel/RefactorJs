@@ -8,6 +8,8 @@ app_license = "MIT"
 # Includes in <head>
 # ------------------
 
+app_include_js = ["refactorjs.bundle.js"]
+doctype_js = {"Sales Order": "refactorjs/customizations/sales_order/sales_order.js"}
 # include js, css files in header of desk.html
 # app_include_css = "/assets/refactorjs/css/refactorjs.css"
 # app_include_js = "/assets/refactorjs/js/refactorjs.js"
