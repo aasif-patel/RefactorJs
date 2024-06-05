@@ -3,5 +3,6 @@
 *.egg-info
 *.swp
 tags
+refactorjs/public/dist
 refactorjs/docs/current
 node_modules/

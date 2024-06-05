@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../apps/refactorjs/refactorjs/public/js/sales_order.js"],
-  "sourcesContent": ["frappe.provide(\"refactorjs.sales_order\");\n\nrefactorjs.sales_order.load_offer = function () {\n    frappe.call({\n        method:\"refactorjs.customizations.sales_order.api.offer_detail.get_active_offer\",\n        callback:function(r){\n            if(r.message){\n                var intro = 'Available Offer for you..<br>'\n                r.message.forEach(e => {\n                    if (e.description){\n                        intro = intro + e.description\n                    }else{\n                        intro = intro + e.name\n                    }\n                });\n            }else{\n                var intro = null\n            }\n            if (intro){\n                cur_frm.set_intro(intro);\n            }\n        }\n    })\n};"],
-  "mappings": "MAAA,OAAO,QAAQ,wBAAwB,EAEvC,WAAW,YAAY,WAAa,UAAY,CAC5C,OAAO,KAAK,CACR,OAAO,0EACP,SAAS,SAAS,EAAE,CAChB,GAAG,EAAE,QAAQ,CACT,GAAI,GAAQ,gCACZ,EAAE,QAAQ,QAAQ,GAAK,CACnB,AAAI,EAAE,YACF,EAAQ,EAAQ,EAAE,YAElB,EAAQ,EAAQ,EAAE,IAE1B,CAAC,CACL,KACI,IAAI,GAAQ,KAEhB,AAAI,GACA,QAAQ,UAAU,CAAK,CAE/B,CACJ,CAAC,CACL",
-  "names": []
-}

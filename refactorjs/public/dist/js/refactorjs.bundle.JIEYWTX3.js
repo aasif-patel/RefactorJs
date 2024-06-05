@@ -1,2 +1,0 @@
-(()=>{frappe.provide("refactorjs.sales_order");refactorjs.sales_order.load_offer=function(){frappe.call({method:"refactorjs.customizations.sales_order.api.offer_detail.get_active_offer",callback:function(a){if(a.message){var e="Available Offer for you..<br>";a.message.forEach(r=>{r.description?e=e+r.description:e=e+r.name})}else var e=null;e&&cur_frm.set_intro(e)}})};})();
-//# sourceMappingURL=refactorjs.bundle.JIEYWTX3.js.map
